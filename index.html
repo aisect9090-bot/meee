@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorry 😔</title>
+
+<style>
+body{
+  margin:0;
+  padding:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  background:linear-gradient(135deg,#ff9a9e,#fecfef);
+  font-family:Arial;
+  text-align:center;
+  overflow:hidden;
+}
+
+h1{
+  font-size:40px;
+  color:#ff0066;
+}
+
+p{
+  font-size:20px;
+}
+
+button{
+  padding:10px 20px;
+  font-size:18px;
+  border:none;
+  border-radius:20px;
+  margin:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#yes{
+  background:#4CAF50;
+  color:white;
+}
+
+#no{
+  background:#f44336;
+  color:white;
+  position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🙈 I Am Really Sorry 🙈</h1>
+<p>Galti ho gayi 😅 Maaf kar doge?</p>
+
+<button id="yes" onclick="love()">Haan 😍</button>
+<button id="no" onmouseover="moveButton()">Nahi 😜</button>
+
+<script>
+function moveButton(){
+  var button = document.getElementById("no");
+  button.style.top = Math.random()*80 + "%";
+  button.style.left = Math.random()*80 + "%";
+}
+
+function love(){
+  document.body.innerHTML = `
+  <h1>🥳 Yayyy !!!</h1>
+  <p>Thank You Maaf Karne Ke Liye 💖</p>
+  <h2>Ab Kabhi Gussa Mat Hona 😇</h2>
+  `;
+}
+</script>
+
+</body>
+</html>
